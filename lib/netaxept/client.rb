@@ -177,7 +177,7 @@ module Netaxept
     end
 
     def parser
-      @parser ||= Nori.new(strip_namespaces: true, convert_tags_to: ->(tag){tag.snakecase.to_sym})
+      @parser ||= Nori.new(strip_namespaces: true, convert_tags_to: ->(tag){tag.underscore.to_sym})
     end
 
     ##
